@@ -1,7 +1,7 @@
 source 'http://rubygems.org'
 
 gem 'rails', '3.2.6'#, :path => "vendor/rails"
-gem 'unicorn'
+#gem 'unicorn'
 # gem 'assets', :path => "~/Sites/side_projects/assets"
 
 gem 'will_paginate'
@@ -11,7 +11,7 @@ if ENV['USE_LOCAL_FOREM']
   gem 'forem-theme-twist', :path => "~/Sites/side_projects/forem-theme-twist"
   gem 'forem-rdiscount', :path => "~/Sites/side_projects/forem-rdiscount"
 else
-  gem 'forem', :git => "git://github.com/radar/forem.git"
+  gem 'forem', :git => "git://github.com/kl/forem.git"
   gem 'forem-theme-twist', :git => "git://github.com/radar/forem-theme-twist"
   gem 'forem-rdiscount', :git => "git://github.com/radar/forem-rdiscount"
 end
@@ -28,6 +28,7 @@ gem 'dragonfly', '0.9.5'
 group :development do
   gem 'pg'
   gem 'ruby-prof'
+  gem 'sqlite3'
 end
 
 group :test do
